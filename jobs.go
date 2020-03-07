@@ -1,7 +1,7 @@
 package main
 
 import (
-	sdk "github.com/gaia-pipeline/gosdk"
+	sdk "github.com/Skarlso/gosdk"
 )
 
 var jobs = sdk.Jobs{
@@ -21,6 +21,13 @@ var jobs = sdk.Jobs{
 		Title:       "Create K8S Namespace",
 		Description: "Creates a new Kubernetes namespace for the new test environment.",
 		DependsOn:   []string{"DB Migration"},
+		Args: sdk.Arguments{
+			{
+				Description: "From the outside",
+				Key:         "AWESOME_KEY",
+				Type:        sdk.OutputInp,
+			},
+		},
 	},
 	sdk.Job{
 		Handler:     CreateDeployment,
