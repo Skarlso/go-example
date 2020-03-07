@@ -37,6 +37,11 @@ func MigrateDB(args sdk.Arguments) (sdk.Outputs, error) {
 func CreateNamespace(args sdk.Arguments) (sdk.Outputs, error) {
 	log.Println("CreateNamespace has been started!")
 	log.Println("Got arguments: ", args)
+	log.Println("Values:")
+	for _, v := range args {
+		log.Print("Value: ", v.Value)
+	}
+	log.Println()
 
 	// lets sleep to simulate that we do something
 	time.Sleep(5 * time.Second)
