@@ -4,7 +4,7 @@ import (
 	"log"
 	"time"
 
-	sdk "github.com/Skarlso/gosdk"
+	sdk "github.com/Skarlso/gosdk/v2"
 )
 
 func CreateUser(args sdk.Arguments) (sdk.Outputs, error) {

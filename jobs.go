@@ -1,7 +1,7 @@
 package main
 
 import (
-	sdk "github.com/Skarlso/gosdk"
+	sdk "github.com/Skarlso/gosdk/v2"
 )
 
 var jobs = sdk.Jobs{
