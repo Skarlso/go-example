@@ -28,22 +28,4 @@ var jobs = sdk.Jobs{
 		Description: "Creates a new Kubernetes deployment for the new test environment.",
 		DependsOn:   []string{"Create K8S Namespace"},
 	},
-	sdk.Job{
-		Handler:     CreateService,
-		Title:       "Create K8S Service",
-		Description: "Creates a new Kubernetes service for the new test environment.",
-		DependsOn:   []string{"Create K8S Namespace"},
-	},
-	sdk.Job{
-		Handler:     CreateIngress,
-		Title:       "Create K8S Ingress",
-		Description: "Creates a new Kubernetes ingress for the new test environment.",
-		DependsOn:   []string{"Create K8S Namespace"},
-	},
-	sdk.Job{
-		Handler:     Cleanup,
-		Title:       "Clean up",
-		Description: "Removes all temporary files.",
-		DependsOn:   []string{"Create K8S Deployment", "Create K8S Service", "Create K8S Ingress"},
-	},
 }
