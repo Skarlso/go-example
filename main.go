@@ -18,6 +18,7 @@ func CreateUser(args sdk.Arguments) error {
 	log.Println("Update7!")
 	log.Println("Update8!")
 	log.Println("Update9!")
+	log.Println("Update10!")
 
 	// lets sleep to simulate that we do something
 	time.Sleep(5 * time.Second)
